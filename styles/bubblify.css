@@ -1,0 +1,152 @@
+.bubble {
+  background-color: #fff;
+  border-radius: 9999px;
+  bottom: -55px;
+  color: #aab8c6;
+  display: inline-block;
+  font-size: 18px;
+  height: 60px;
+  left: 50%;
+  line-height: 60px;
+  margin-left: 30px;
+  opacity: 0; /* so the animation ends with the bubble invisible */
+  position: absolute;
+  width: 60px;
+  z-index: 0;
+}
+
+/* Float */
+
+@keyframes float {
+  0% { bottom: -55px; }
+  100% { bottom: 100%; }
+}
+
+@-webkit-keyframes float {
+  0% { bottom: -55px; }
+  100% { bottom: 100%; }
+}
+
+/* Fade */
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Color */
+
+@keyframes purpleToWhite {
+  0% {
+    background-color: rgba(90, 6, 99, 0.4);
+    color: #5a0663;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@-webkit-keyframes purpleToWhite {
+  0% {
+    background-color: rgba(90, 6, 99, 0.4);
+    color: #5a0663;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@keyframes maroonToWhite {
+  0% {
+    background-color: rgba(143, 7, 50, 0.4);
+    color: #8F0732;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@-webkit-keyframes maroonToWhite {
+  0% {
+    background-color: rgba(143, 7, 50, 0.4);
+    color: #8F0732;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@keyframes redToWhite {
+  0% {
+    background-color: rgba(242, 45, 0, 0.4);
+    color: #f22d00;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@-webkit-keyframes redToWhite {
+  0% {
+    background-color: rgba(242, 45, 0, 0.4);
+    color: #f22d00;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@keyframes orangeToWhite {
+  0% {
+    background-color: rgba(252, 156, 1, 0.4);
+    color: #fc9c01;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@-webkit-keyframes orangeToWhite {
+  0% {
+    background-color: rgba(252, 156, 1, 0.4);
+    color: #fc9c01;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@keyframes yellowToWhite {
+  0% {
+    background-color: rgba(255, 222, 60, 0.4);
+    color: #ffde3c;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}
+
+@-webkit-keyframes yellowToWhite {
+  0% {
+    background-color: rgba(255, 222, 60, 0.4);
+    color: #ffde3c;
+  }
+  100% {
+    background-color: #fff;
+    color: #aab8c6;
+  }
+}

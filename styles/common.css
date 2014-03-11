@@ -1,0 +1,48 @@
+/*
+    "Crowning Glory"
+    http://www.colourlovers.com/palette/579216/Crowning_Glory?widths=0
+    
+    #5a0663 - rgba(90, 6, 99, 1)    - Regal Raiment 
+    #8f0732 - rgba(143, 7, 50, 1)   - Royal Ruby 
+    #f22d00 - rgba(242, 45, 0, 1)   - Fire
+    #fc9c01 - rgba(252, 156, 1, 1)  - Gold for the Crown 
+    #ffde3c - rgba(255, 222, 60, 1) - Glory Yellow
+*/
+
+.purple { color: #5a0663; }
+.maroon { color: #8f0732; }
+.red    { color: #f22d00; }
+.orange { color: #fc9c01; }
+.yellow { color: #ffde3c; }
+
+.bg-purple { background-color: #5a0663; }
+.bg-maroon { background-color: #8f0732; }
+.bg-red    { background-color: #f22d00; }
+.bg-orange { background-color: #fc9c01; }
+.bg-yellow { background-color: #ffde3c; }
+
+.border-purple { border-color: #5a0663; }
+.border-maroon { border-color: #8f0732; }
+.border-red    { border-color: #f22d00; }
+.border-orange { border-color: #fc9c01; }
+.border-yellow { border-color: #ffde3c; }
+
+.button {
+  border-radius: 3px;
+  border: 0 none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  padding: 12px 18px;
+  transition: background-color 300ms;
+}
+
+.button.big {
+  font-size: 16px;
+  padding: 15px 25px;
+}
+
+.button:hover {
+  outline: none;
+}

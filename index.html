@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cambridge Select</title>
+
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic'>
+    <link rel='stylesheet' type='text/css' href="styles/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+    <link rel="stylesheet" type="text/css" href="styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles/home.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bubblify.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="scripts/jquery-ui-1.10.4.effect.min.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/bubblify.js"></script>
+    <script src="scripts/jquery.stellar.min.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('body').stellar();
+        $('#hero').bubblify();
+        Home.bindings();
+      });
+    </script>
+  </head>
+  
+  <body>
+    <nav id="header-bar">
+      <ul class="fixed-width">
+        <li>
+          <a href="team.html">TEAM</a>
+        </li><!--
+     --><li>
+        <a href="careers.html">CAREERS</a>
+      </li><!--
+     --><li id="logo">
+          <h1>
+            <a href="index.html">Cambridge Select</a>
+          </h1>
+        </li><!--
+     --><li>
+        <a href="press.html">PRESS</a>
+      </li><!--
+     --><li>
+          <a href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <section id="hero" class="section" data-stellar-ratio="0.2">
+      <div class="content fixed-width">
+        <h2>Changing the way people find<br>the products they love.</h2>
+        <button class="button big">
+          Learn More
+        </button>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      About
+    </section>
+    
+    <section id="testimonials" class="section">
+      Testimonials
+    </section>
+
+    <section id="map" class="section">
+    </section>
+
+    <section id="footer" class="section">
+      Footer
+    </section>
+  </body>
+</html>

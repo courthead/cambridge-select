@@ -1,0 +1,8 @@
+body > .section.fixed-width {
+  text-align: center;
+}
+
+.fixed-width {
+  margin: 0 auto;
+  width: 900px;
+}

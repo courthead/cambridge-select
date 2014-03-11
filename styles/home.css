@@ -1,0 +1,170 @@
+body {
+  padding-top: 650px; /* equal to #hero's height + #header-bar li's height */
+}
+
+body > .section {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/******************/
+/*   Header Bar   */
+/******************/
+
+#header-bar {
+  background-color: #fff;
+  border-bottom: 2px solid #e9ecef;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#header-bar ul {
+  width: 900px;
+}
+
+#header-bar li {
+  display: inline-block;
+  height: 50px; /* same as #header-bar li line-height, #hero top */
+  line-height: 50px; /* same as #header-bar li height, #hero top */
+  width: 19%;
+}
+
+#header-bar li#logo {
+  width: 24%;
+}
+
+#header-bar a {
+  color: #9daab7;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  vertical-align: top;
+  width: 100%;
+}
+
+#header-bar a:hover {
+  color: #7f8c99;
+}
+
+/************/
+/*   Hero   */
+/************/
+
+#hero {
+  background-color: #eff2f5;
+  height: 600px; /* equal to body's padding-top - #header-bar li's height */
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 50px; /* same as #header-bar li height and line-height */
+  width: 100%;
+  z-index: 0;
+}
+
+#hero > .content {
+  position: relative; /* so we can use z-index */
+  text-align: center;
+  z-index: 1; /* above the .bubble elements */
+}
+
+#hero h2 {
+  animation-name: appear;
+  animation-duration: 750ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: appear;
+  -webkit-animation-duration: 750ms;
+  -webkit-animation-delay: 500ms;
+  -webkit-animation-fill-mode: forwards;
+  color: #333;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-top: 200px;
+  opacity: 0; /* for the appear animation */
+  position: relative; /* for the appear animation */
+  text-shadow: 1px 1px 0 #fff;
+}
+
+#hero .button {
+  animation-name: appear;
+  animation-duration: 750ms;
+  animation-delay: 1500ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: appear;
+  -webkit-animation-duration: 750ms;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+  background-color: rgba(143, 7, 50, 0.6);
+  margin-top: 50px;
+  opacity: 0; /* for the appear animation */
+  position: relative; /* for the appear animation */
+  transition: background-color 400ms;
+}
+
+#hero .button:hover {
+  background-color: rgba(143, 7, 50, 0.8);
+  margin-top: 50px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+/*************/
+/*   About   */
+/*************/
+
+#about {
+  border-bottom: 2px solid #e9ecef;
+  padding: 250px 0;
+}
+
+/********************/
+/*   Testimonials   */
+/********************/
+
+#testimonials {
+  padding: 250px 0;
+}
+
+/***********/
+/*   Map   */
+/***********/
+
+#map {
+  background-image: url("../images/map.png");
+  background-position: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  padding: 250px 0;
+}
+
+/**************/
+/*   Footer   */
+/**************/
+
+#footer {
+  padding: 250px 0;
+}
