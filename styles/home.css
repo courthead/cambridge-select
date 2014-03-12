@@ -72,11 +72,11 @@ body > .section {
 }
 
 #hero h2 {
-  animation-name: appear;
+  animation-name: heroAppear;
   animation-duration: 750ms;
   animation-delay: 500ms;
   animation-fill-mode: forwards;
-  -webkit-animation-name: appear;
+  -webkit-animation-name: heroAppear;
   -webkit-animation-duration: 750ms;
   -webkit-animation-delay: 500ms;
   -webkit-animation-fill-mode: forwards;
@@ -85,24 +85,24 @@ body > .section {
   font-weight: 600;
   line-height: 50px;
   margin-top: 200px;
-  opacity: 0; /* for the appear animation */
-  position: relative; /* for the appear animation */
+  opacity: 0; /* for the heroAppear animation */
+  position: relative; /* for the heroAppear animation */
   text-shadow: 1px 1px 0 #fff;
 }
 
 #hero .button {
-  animation-name: appear;
+  animation-name: heroAppear;
   animation-duration: 750ms;
   animation-delay: 1500ms;
   animation-fill-mode: forwards;
-  -webkit-animation-name: appear;
+  -webkit-animation-name: heroAppear;
   -webkit-animation-duration: 750ms;
   -webkit-animation-delay: 1000ms;
   -webkit-animation-fill-mode: forwards;
   background-color: rgba(143, 7, 50, 0.6);
   margin-top: 50px;
-  opacity: 0; /* for the appear animation */
-  position: relative; /* for the appear animation */
+  opacity: 0; /* for the heroAppear animation */
+  position: relative; /* for the heroAppear animation */
   transition: background-color 400ms;
 }
 
@@ -111,7 +111,7 @@ body > .section {
   margin-top: 50px;
 }
 
-@keyframes appear {
+@keyframes heroAppear {
   0% {
     opacity: 0;
     top: 20px;
@@ -122,7 +122,7 @@ body > .section {
   }
 }
 
-@-webkit-keyframes appear {
+@-webkit-keyframes heroAppear {
   0% {
     opacity: 0;
     top: 20px;
@@ -147,8 +147,40 @@ body > .section {
 /********************/
 
 #testimonials {
-  padding: 250px 0;
+  background-color: #e9ecf5;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fff), to(#e9ecf5)); /* Konqueror */
+  background-image: -moz-linear-gradient(top, #fff, #e9ecf5); /* FF 3.6+ */
+  background-image: -ms-linear-gradient(top, #fff, #e9ecf5); /* IE10 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e9ecf5)); /* Safari 4+, Chrome 2+ */
+  background-image: -webkit-linear-gradient(top, #fff, #e9ecf5); /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(top, #fff, #e9ecf5); /* Opera 11.10 */
+  background-image: linear-gradient(top, #fff, #e9ecf5); /* standard */
+  padding: 100px 0;
 }
+
+#testimonials > .content {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 900px;
+}
+
+#testimonials h3 {
+  color: #444;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#testimonials #customer-quotes {
+  margin-bottom: 100px;
+}
+
+#testimonials .testimonialize .highlighted:after {
+  
+}
+
 
 /***********/
 /*   Map   */

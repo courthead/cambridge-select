@@ -11,17 +11,21 @@
     <link rel="stylesheet" type="text/css" href="styles/common.css" />
     <link rel="stylesheet" type="text/css" href="styles/home.css" />
     <link rel="stylesheet" type="text/css" href="styles/bubblify.css" />
+    <link rel="stylesheet" type="text/css" href="styles/testimonialize.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="scripts/jquery-ui-1.10.4.effect.min.js"></script>
     <script src="scripts/home.js"></script>
     <script src="scripts/bubblify.js"></script>
+    <script src="scripts/testimonialize.js"></script>
     <script src="scripts/jquery.stellar.min.js"></script>
     
     <script type="text/javascript">
       $(document).ready(function() {
         $('body').stellar();
         $('#hero').bubblify();
+        $('#customer-quotes ul').testimonialize(4000);
+        $('#partner-quotes ul').testimonialize(5000);
         Home.bindings();
       });
     </script>
@@ -64,7 +68,26 @@
     </section>
     
     <section id="testimonials" class="section">
-      Testimonials
+      <div class="content">
+        <div id="customer-quotes">
+          <h3>Our customers love us.</h3>
+          <ul>
+            <li>Just the way it should be.</li>
+            <li>LOVE, LOVE, LOVE THESE!!!! Arrived fast and in perfect condition.</li>
+            <li>Perfect transaction in every way. Thanks!</li>
+            <li>Arrived quickly, and was just what we wanted. I love these hats, and HIGHLY recommend this company and this hat!</li>
+          </ul>
+        </div>
+        <div id="partner-quotes">
+          <h3>And our partners do, too.</h3>
+          <ul>
+            <li>You're ordering more products than our big box stores.</li>
+            <li>We've had to increase our manufacturing batches to meet your demand. We are selling out of nearly every style that you sell for us.</li>
+            <li>We know that you always pay on time.</li>
+            <li>We were referred to you by a long-time friend who has been in the industry for over 30 years. He said you were a dynamic up-and-coming company and the only one who should be selling our products.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="map" class="section">

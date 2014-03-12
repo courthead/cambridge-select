@@ -8,3 +8,9 @@ Home.bindings = function() {
     $('html, body').stop().animate(animation, 1000, 'easeInOutQuart');
   });
 };
+
+function asdf() {
+  var DARK = 'dark', LIGHT = 'light';
+
+
+}
