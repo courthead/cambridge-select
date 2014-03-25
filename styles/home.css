@@ -257,21 +257,21 @@ body > .section {
 /*****************/
 
 #slideshow {
-  background-color: #eff2f5;
+  background-color: #e5e8eb;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#fff), to(#eff2f5)); /* Konqueror */
-  background-image: -moz-linear-gradient(top, #fff, #eff2f5); /* FF 3.6+ */
-  background-image: -ms-linear-gradient(top, #fff, #eff2f5); /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #eff2f5)); /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(top, #fff, #eff2f5); /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(top, #fff, #eff2f5); /* Opera 11.10 */
-  background-image: linear-gradient(top, #fff, #eff2f5); /* standard */nd-color: #f6f6f6;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fff), to(#e5e8eb)); /* Konqueror */
+  background-image: -moz-linear-gradient(top, #fff, #e5e8eb); /* FF 3.6+ */
+  background-image: -ms-linear-gradient(top, #fff, #e5e8eb); /* IE10 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e5e8eb)); /* Safari 4+, Chrome 2+ */
+  background-image: -webkit-linear-gradient(top, #fff, #e5e8eb); /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(top, #fff, #e5e8eb); /* Opera 11.10 */
+  background-image: linear-gradient(top, #fff, #e5e8eb); /* standard */nd-color: #f6f6f6;
   border-bottom: 2px solid #e9ecef;
   width: 100%;
 }
 
 #slideshow .slide {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.5);
   border: 2px solid rgba(255, 255, 255, 1);
   border-radius: 10px;
   max-width: 800px;
@@ -375,27 +375,40 @@ body > .section {
 }
 
 #map .marker {
-  background-color: #fc9c01;
+  background-color: #8f0732;
   border-radius: 9999px;
   border: 2px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 40px;
   left: 50%;
-  margin-left: -20px;
+  margin-left: 127px;
+  margin-top: -190px;
   position: absolute;
   top: -160px;
   width: 40px;
 }
 
+#map .marker:before {
+  background-color: #fff;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  content: "";
+  height: 22px;
+  left: 9px;
+  position: absolute;
+  top: 9px;
+  width: 22px;
+}
+
 #map .marker:after {
-  border-color: #fc9c01 transparent transparent;
+  border-color: #8f0732 transparent transparent;
   border-style: solid;
-  border-width: 27px 20px 20px;
+  border-width: 14px 16px 0;
   content: "";
   height: 0;
-  left: 0;
+  left: 4px;
   position: absolute;
-  top: 25px;
+  top: 32px;
   width: 0;
 }
 
@@ -427,6 +440,67 @@ body > .section {
   }
   100% {
     top: 50%;
+  }
+}
+
+#map .blurb {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  left: 50%;
+  margin-left: 40px;
+  margin-top: -120px;
+  opacity: 0;
+  padding: 15px 0 15px 20px;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  width: 200px;
+}
+
+#map .blurb.animate {
+  animation-name: mapBlurbAppear;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1300ms;
+  -webkit-animation-name: mapBlurbAppear;
+  -webkit-animation-duration: 550ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 1300ms;
+}
+
+#map .blurb h3 {
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#map .blurb p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+@keyframes mapBlurbAppear {
+  0% {
+    opacity: 0;
+    margin-top: -120px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -110px;
+  }
+}
+
+@-webkit-keyframes mapBlurbAppear {
+  0% {
+    opacity: 0;
+    margin-top: -120px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -110px;
   }
 }
 
