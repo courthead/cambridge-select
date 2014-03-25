@@ -11,31 +11,41 @@
 
     $(window).on('scroll', function() {
       var pixelsScrolled = $(this).scrollTop(),
-        windowHeight = $(this).height();
-      runScrollFunctions(pixelsScrolled, windowHeight);
+        windowHeight = $(this).height(),
+        topOfWindow = pixelsScrolled,
+        bottomOfWindow = pixelsScrolled + windowHeight;
+      runScrollFunctions(topOfWindow, bottomOfWindow);
     });
   };
 
-  function runScrollFunctions(pixelsScrolled, windowHeight) {
-    popInAboutSection(pixelsScrolled, windowHeight);
-    showMapElements(pixelsScrolled, windowHeight);
+  function runScrollFunctions(topOfWindow, bottomOfWindow) {
+    popInAboutSection(topOfWindow, bottomOfWindow);
+    showMapElements(topOfWindow, bottomOfWindow);
   };
 
-  function popInAboutSection(pixelsScrolled, windowHeight) {
-    var $blurbs = $('#about li');
-    if ($blurbs.eq(0).hasClass('animate')) return;
+  function popInAboutSection(topOfWindow, bottomOfWindow) {
+    var $blurbs = $('#about li'),
+      $blurb = $blurbs.eq(0),
+      blurbPixelsFromTop = $blurb.offset().top,
+      blurbHeight = $blurb.height();
 
-    var blurbPixelsFromTop = $blurbs.eq(0).offset().top;
-    if (windowHeight + pixelsScrolled > blurbPixelsFromTop) {
+    if (topOfWindow < (blurbPixelsFromTop + blurbHeight) &&
+        bottomOfWindow > (blurbPixelsFromTop + (blurbHeight / 2))) {
       $blurbs.addClass('animate');
+    } else {
+      $blurbs.removeClass('animate');
     }
   };
 
-  function showMapElements(pixelsScrolled, windowHeight) {
+  function showMapElements(topOfWindow, bottomOfWindow) {
     var $map = $('#map'),
-      mapPixelsFromTop = $map.offset().top + ($map.height() / 2);
-    if (windowHeight + pixelsScrolled > mapPixelsFromTop) {
+      mapPixelsFromTop = $map.offset().top;
+
+    if (topOfWindow < mapPixelsFromTop &&
+        bottomOfWindow > (mapPixelsFromTop + ($map.height() / 2))) {
       $map.find('*').addClass('animate');
+    } else {
+      $map.find('.animate').removeClass('animate');
     }
   };
 })(window);
