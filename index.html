@@ -11,21 +11,20 @@
     <link rel="stylesheet" type="text/css" href="styles/common.css" />
     <link rel="stylesheet" type="text/css" href="styles/home.css" />
     <link rel="stylesheet" type="text/css" href="styles/bubblify.css" />
-    <link rel="stylesheet" type="text/css" href="styles/testimonialize.css" />
+    <link rel="stylesheet" type="text/css" href="styles/slideshow.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="scripts/jquery-ui-1.10.4.effect.min.js"></script>
     <script src="scripts/home.js"></script>
     <script src="scripts/bubblify.js"></script>
-    <script src="scripts/testimonialize.js"></script>
+    <script src="scripts/slideshow.js"></script>
     <script src="scripts/jquery.stellar.min.js"></script>
     
     <script type="text/javascript">
       $(document).ready(function() {
         $('body').stellar();
         $('#hero').bubblify();
-        $('#customer-quotes ul').testimonialize(4000);
-        $('#partner-quotes ul').testimonialize(5000);
+        $('#slideshow').slideshow();
         Home.bindings();
       });
     </script>
@@ -64,37 +63,98 @@
     </section>
 
     <section id="about" class="section">
-      About
+      <div class="content">
+        <img src="images/lion.png" />
+        <p>
+          <strong class="maroon">Cambridge Select</strong> brings together the
+          best in technology, operations, and product to offer an unparalleled
+          customer experience on the world's largest marketplace: <strong class="orange">Amazon</strong>.
+        </p>
+        <ul>
+          <li>
+            <h3>
+              <i class="fa fa-pencil"></i>
+              <span>Nonsensical Nonsense.</span>
+            </h3>
+            <p>
+              Measures with elks talking zebra cake coinage on pencil stilted tributaries and some tater tots.
+            </p>
+          </li>
+          <li>
+            <h3>
+              <i class="fa fa-briefcase"></i>
+              <span>Stellar Handshakes.</span>
+            </h3>
+            <p>
+              Almost consumer flown trees are around should slide vaults to deter popcorn or joyful lorem ipsum text.
+            </p>
+          </li>
+          <li>
+            <h3>
+              <i class="fa fa-lock"></i>
+              <span>Fantastically Funky.</span>
+            </h3>
+            <p>
+              Wizzy bang (and top of the tent) son absolutely placed utter site and entirely the over runs with.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="slideshow" class="section">
+      <div class="slide">
+        <div class="text">
+          <h3 class="purple">One & Two.</h3>
+          <p>
+            Ut dictum sapien et risus consequat<br>
+            ac auctor nisl luctus. Duisin dolor<br>
+            nectabulum. <strong>It's that easy.</strong>
+          </p>
+        </div>
+        <div class="image"></div>
+      </div>
+      <div class="slide">
+        <div class="text">
+          <h3 class="orange">More Text.</h3>
+          <p>
+            Ut dictum sapien et risus consequat<br>
+            ac auctor nisl luctus. Duisin dolor<br>
+            nectabulum. <strong>It's that easy.</strong>
+          </p>
+        </div>
+        <div class="image"></div>
+      </div>
+      <div class="slide">
+        <div class="text">
+          <h3 class="maroon">Colorful Title.</h3>
+          <p>
+            Ut dictum sapien et risus consequat<br>
+            ac auctor nisl luctus. Duisin dolor<br>
+            nectabulum. <strong>It's that easy.</strong>
+          </p>
+        </div>
+        <div class="image"></div>
+      </div>
+      <div class="controls"></div>
     </section>
     
     <section id="testimonials" class="section">
       <div class="content">
-        <div id="customer-quotes">
-          <h3>Our customers love us.</h3>
-          <ul>
-            <li>Just the way it should be.</li>
-            <li>LOVE, LOVE, LOVE THESE!!!! Arrived fast and in perfect condition.</li>
-            <li>Perfect transaction in every way. Thanks!</li>
-            <li>Arrived quickly, and was just what we wanted. I love these hats, and HIGHLY recommend this company and this hat!</li>
-          </ul>
-        </div>
-        <div id="partner-quotes">
-          <h3>And our partners do, too.</h3>
-          <ul>
-            <li>You're ordering more products than our big box stores.</li>
-            <li>We've had to increase our manufacturing batches to meet your demand. We are selling out of nearly every style that you sell for us.</li>
-            <li>We know that you always pay on time.</li>
-            <li>We were referred to you by a long-time friend who has been in the industry for over 30 years. He said you were a dynamic up-and-coming company and the only one who should be selling our products.</li>
-          </ul>
-        </div>
+        <img class="photo" src="http://www.herworldplus.com/sites/default/files/imagecache/thumb_60x60/Get%20Mila%20Kunis%20makeup%20style%20THUMBNAIL%20.jpg" />
+        <p>
+          We've had to increase our manufacturing batches to meet your demand. We are selling out of nearly every style that you sell for us!
+        </p>
+        <img id="quotation-mark" src="images/quotation-mark.png" />
       </div>
     </section>
 
     <section id="map" class="section">
+      <div class="marker"></div>
     </section>
 
     <section id="footer" class="section">
-      Footer
+
     </section>
   </body>
 </html>
