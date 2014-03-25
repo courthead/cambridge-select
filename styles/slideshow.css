@@ -1,10 +1,14 @@
 #slideshow {
-
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #slideshow .slide {
+  display: inline-block;
+  margin: 0 auto;
   opacity: 0;
   overflow: hidden;
+  vertical-align: top;
 }
 
 #slideshow .slide.active {
@@ -18,10 +22,6 @@
 
 #slideshow .slide.hidden {
   display: none;
-}
-
-#slideshow .controls {
-  margin: 20px auto;
 }
 
 #slideshow .controls [role="button"] {
